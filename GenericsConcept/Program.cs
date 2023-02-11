@@ -13,12 +13,12 @@ namespace GenericsConcept
             Console.WriteLine("....Generics...");
             List<int> listNo = new List<int> { 90, 1, 56, 88, 4, 23, 7 };
             List<float> listfloat = new List<float> { 22, 3.3f, 12.9f, 99.234f, 1, 67.85f };
-            List<string> listString = new List<string> { "apple", "banana", "xray", "peach", "WaterMelon" };
+            List<string> listString = new List<string> { "apple", "banana", "grapes", "peach", "WaterMelon" };
 
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\n1:Find Max Number \n2:Find Max Float \n3:find max string \n4:sort int find max \n5:sort float \n6:sort string \n5:Exit");
+                Console.WriteLine("\n1:Find Max Number \n2:Find Max Float \n3:find max string \n4:sort int find max \n5:sort float \n6:sort string \n22:Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
