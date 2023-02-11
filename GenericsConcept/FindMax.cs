@@ -27,7 +27,7 @@ namespace GenericsConcept
             {
                 Console.WriteLine("2 or 3 Values are Equal");
             }
-            return default;
+            throw new Exception("2 or 3 Values are Equal");
         }
         public float FindMaxFloat(float first, float second, float third)
         {
@@ -44,7 +44,24 @@ namespace GenericsConcept
             {
                 return third;
             }
-            return default;
+            throw new Exception("2 or 3 Values are Equal");
+        }
+        public string FindMaxString(String first, String second, String third)
+        {
+
+            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
+            {
+                return first;
+            }
+            else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
+            {
+                return second;
+            }
+            else if (third.CompareTo(second) > 0 && third.CompareTo(first) > 0)
+            {
+                return third;
+            }
+            throw new Exception("2 or 3 Values are Equal");
         }
     }
 }
