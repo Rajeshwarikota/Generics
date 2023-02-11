@@ -11,7 +11,6 @@ namespace GenericsConcept
         static void Main(string[] args)
         {
             Console.WriteLine("....Generics...");
-            FindMax maxValue = new FindMax();
             bool flag = true;
             while (flag)
             {
@@ -20,19 +19,19 @@ namespace GenericsConcept
                 switch (option)
                 {
                     case 1:
-                        Console.WriteLine("The Greatest Number is {0}", maxValue.FindMaxNumber(43, 56, 15));
-                        Console.WriteLine("The Greatest Number is {0}", maxValue.FindMaxNumber(16, 145, 34));
-                        Console.WriteLine("The Greatest Number is {0}", maxValue.FindMaxNumber(136, 16, 5));
+                        Console.WriteLine("The Greatest Number is {0}", FindMax<int>.FindMaxValue(43, 56, 15));
+                        Console.WriteLine("The Greatest Number is {0}", FindMax<int>.FindMaxValue(16, 145, 34));
+                        Console.WriteLine("The Greatest Number is {0}", FindMax<int>.FindMaxValue(136, 16, 5));
                         break;
                     case 2:
-                        Console.WriteLine("The Greatest Value is {0}", maxValue.FindMaxFloat(21.5f, 14.9f, 15));
-                        Console.WriteLine("The Greatest Value is {0}", maxValue.FindMaxFloat(12, 90, 15.3f));
-                        Console.WriteLine("The Greatest Value is {0}", maxValue.FindMaxFloat(12, 14, 25.1f));
+                        Console.WriteLine("The Greatest Value is {0}", FindMax<float>.FindMaxValue(21.5f, 14.9f, 15));
+                        Console.WriteLine("The Greatest Value is {0}", FindMax<float>.FindMaxValue(12, 90, 15.3f));
+                        Console.WriteLine("The Greatest Value is {0}", FindMax<float>.FindMaxValue(12, 14, 25.1f));
                         break;
                     case 3:
-                        Console.WriteLine("The Greatest Value is {0}", maxValue.FindMaxString("Apple", "Peach", "Banana"));
-                        Console.WriteLine("The Greatest Value is {0}", maxValue.FindMaxString("dragonfruit", "goava", "grapes"));
-                        Console.WriteLine("The Greatest Value is {0}", maxValue.FindMaxString("pineapple", "papaya", "Peach"));
+                        Console.WriteLine("The Greatest Value is {0}", FindMax<string>.FindMaxValue("Apple", "Peach", "Banana"));
+                        Console.WriteLine("The Greatest Value is {0}", FindMax<string>.FindMaxValue("dragonfruit", "goava", "grapes"));
+                        Console.WriteLine("The Greatest Value is {0}", FindMax<string>.FindMaxValue("pineapple", "papaya", "Peach"));
                         break;
                     case 4:
                         flag = false;

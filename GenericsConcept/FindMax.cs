@@ -6,47 +6,16 @@ using System.Threading.Tasks;
 
 namespace GenericsConcept
 {
-    internal class FindMax
+    internal class FindMax<T> where T : IComparable
     {
-        public int FindMaxNumber(int first, int second, int third)
+        public T first, second, third;
+        public FindMax(T first, T second, T third)
         {
-
-            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
-            {
-                return first;
-            }
-            else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
-            {
-                return second;
-            }
-            else if (third.CompareTo(second) > 0 && third.CompareTo(first) > 0)
-            {
-                return third;
-            }
-            else
-            {
-                Console.WriteLine("2 or 3 Values are Equal");
-            }
-            throw new Exception("2 or 3 Values are Equal");
+            this.first = first;
+            this.second = second;
+            this.third = third;
         }
-        public float FindMaxFloat(float first, float second, float third)
-        {
-
-            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
-            {
-                return first;
-            }
-            else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
-            {
-                return second;
-            }
-            else if (third.CompareTo(second) > 0 && third.CompareTo(first) > 0)
-            {
-                return third;
-            }
-            throw new Exception("2 or 3 Values are Equal");
-        }
-        public string FindMaxString(String first, String second, String third)
+        public static T FindMaxValue(T first, T second, T third)
         {
 
             if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
@@ -63,8 +32,7 @@ namespace GenericsConcept
             }
             throw new Exception("2 or 3 Values are Equal");
         }
+
     }
 }
-
- 
 
